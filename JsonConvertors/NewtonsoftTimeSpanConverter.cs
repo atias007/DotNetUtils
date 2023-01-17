@@ -1,9 +1,9 @@
 ﻿using Newtonsoft.Json;
 using System;
 
-namespace CustomsCloud.InfrastructureCore.WebApi.JsonConvertor
+namespace Core.JsonConvertor
 {
-    public class TimeSpanConverter : JsonConverter<TimeSpan>
+    public class NewtonsoftTimeSpanConverter : JsonConverter<TimeSpan>
     {
         private const string PathElement = "ticks";
 
