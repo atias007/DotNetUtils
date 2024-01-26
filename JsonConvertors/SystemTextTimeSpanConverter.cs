@@ -36,6 +36,7 @@ namespace Core.JsonConvertors
         private static TimeSpan FromString(ref Utf8JsonReader reader)
         {
             var value = reader.GetString();
+            if (value == null) { return default; }
             var result = TimeSpan.Parse(value, CultureInfo.CurrentCulture);
             return result;
         }
