@@ -1,8 +1,8 @@
 ﻿namespace Common;
 
-public static class TaskQueue
+internal static class TaskQueue
 {
-    public static async Task Run(IEnumerable<Func<Task>> tasks, int maxParallel)
+    public static async Task RunAsync(IEnumerable<Func<Task>> tasks, int maxParallel)
     {
         var semaphoreSlim = new SemaphoreSlim(maxParallel, maxParallel); // Limit to maxParallel concurrent tasks with a max queue size of maxParallel
 
