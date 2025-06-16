@@ -44,7 +44,7 @@ internal class FileWriter
 
     public void AppendToFile(string address, string status, double roundtripTime, string? info)
     {
-        var logEntry = $"{DateTime.Now.ToShortTimeString()},{address},{status},{roundtripTime},{info}";
+        var logEntry = $"{DateTime.Now.ToLongTimeString()},{address},{status},{roundtripTime},{info}";
         logQueue.Enqueue(logEntry);
     }
 }
