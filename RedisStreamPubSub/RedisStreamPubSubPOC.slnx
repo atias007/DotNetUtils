@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="RedisStreamPubSubPOC/RedisStreamPubSubPOC.csproj" />
+  <Project Path="Subscribber/Subscribber.csproj" />
+</Solution>
